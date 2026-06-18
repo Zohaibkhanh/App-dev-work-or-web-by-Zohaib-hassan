@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Ashley Living</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .contact-page { padding: calc(var(--nav-h) + 60px) 52px 100px; background: var(--beige-100); }
+    .contact-page-header { margin-bottom: 64px; }
+    .contact-page-header h1 { font-family:'Playfair Display',serif; font-size:clamp(32px,5vw,62px); font-weight:400; color:var(--deep); line-height:1.1; margin-bottom:12px; }
+    .contact-page-header p { font-size:14px; color:var(--beige-500); max-width:480px; line-height:1.75; }
+    .contact-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-bottom:80px; }
+    .contact-card { background:var(--beige-200); padding:40px 36px; border:1px solid var(--beige-300); transition:background 0.2s; }
+    .contact-card:hover { background:var(--beige-300); }
+    .contact-card .c-icon { font-size:28px; margin-bottom:20px; }
+    .contact-card h3 { font-family:'Playfair Display',serif; font-size:20px; font-weight:400; color:var(--deep); margin-bottom:10px; }
+    .contact-card p { font-size:13px; color:var(--beige-500); line-height:1.7; margin-bottom:16px; }
+    .contact-card a.c-link { font-size:13px; font-weight:600; color:var(--gold); letter-spacing:0.04em; border-bottom:1px solid var(--gold); padding-bottom:2px; transition:color 0.2s; display:inline-block; }
+    .contact-card a.c-link:hover { color:var(--deep); border-color:var(--deep); }
+    .contact-wa-banner { background:var(--deep); padding:60px 52px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+    .contact-wa-banner h2 { font-family:'Playfair Display',serif; font-size:clamp(24px,3vw,40px); font-weight:400; color:var(--white); max-width:500px; line-height:1.2; }
+    .contact-wa-banner p { font-size:13px; color:rgba(255,255,255,0.45); margin-top:8px; }
+    .btn-wa-big { display:inline-flex; align-items:center; gap:12px; background:var(--green); color:var(--white); font-size:13px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:16px 32px; border-radius:2px; transition:opacity 0.2s; flex-shrink:0; }
+    .btn-wa-big:hover { opacity:0.88; }
+    .contact-hours { margin-top:60px; display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+    .hours-block { background:var(--beige-200); padding:36px; border:1px solid var(--beige-300); }
+    .hours-block h4 { font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--beige-500); margin-bottom:16px; }
+    .hours-block p { font-size:14px; color:var(--deep); line-height:1.8; }
+    @media(max-width:900px) {
+      .contact-page { padding:calc(var(--nav-h) + 40px) 24px 70px; }
+      .contact-cards { grid-template-columns:1fr; }
+      .contact-wa-banner { padding:40px 24px; flex-direction:column; align-items:flex-start; }
+      .contact-hours { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="/" class="logo">Ashley Living</a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/sofas">Sofas</a></li>
+    <li><a href="/corner-sofas">Corner Sofas</a></li>
+    <li><a href="/sofa-beds">Sofa Beds</a></li>
+    <li><a href="/beds">Beds</a></li>
+    <li><a href="/mattresses">Mattresses</a></li>
+    <li><a href="/wardrobes">Wardrobes</a></li>
+    <li><a href="/contact" class="active">Contact</a></li>
+    <li><a href="https://wa.me/447593708325" class="nav-wa" target="_blank">WhatsApp</a></li>
+  </ul>
+  <div class="nav-burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</header>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a><a href="/sofas">Sofas</a><a href="/corner-sofas">Corner Sofas</a>
+  <a href="/sofa-beds">Sofa Beds</a><a href="/beds">Beds</a>
+  <a href="/mattresses">Mattresses</a><a href="/wardrobes">Wardrobes</a>
+  <a href="/contact">Contact</a>
+  <a href="https://wa.me/447593708325" class="m-wa" target="_blank">💬 Order on WhatsApp</a>
+</nav>
+
+<div class="contact-page">
+  <div class="contact-page-header reveal">
+    <div class="breadcrumb" style="margin-bottom:16px;"><a href="/">Home</a><span class="sep">/</span><span>Contact</span></div>
+    <h1>Get in Touch</h1>
+    <p>We're always happy to help. Fastest response is via WhatsApp — we typically reply within 1 hour.</p>
+  </div>
+
+  <div class="contact-cards">
+    <div class="contact-card reveal">
+      <div class="c-icon">💬</div>
+      <h3>WhatsApp</h3>
+      <p>The fastest way to reach us. Send a message and we'll reply within 1 hour. You can also place orders directly via WhatsApp.</p>
+      <a href="https://wa.me/447593708325" class="c-link" target="_blank">+44 759 370 8325 →</a>
+    </div>
+    <div class="contact-card reveal">
+      <div class="c-icon">🚚</div>
+      <h3>Delivery Enquiries</h3>
+      <p>We deliver to every postcode across the UK. Cash on delivery available on all orders — you only pay when your furniture arrives.</p>
+      <a href="https://wa.me/447593708325?text=Hi%2C%20I%20have%20a%20delivery%20enquiry" class="c-link" target="_blank">Ask about delivery →</a>
+    </div>
+    <div class="contact-card reveal">
+      <div class="c-icon">📦</div>
+      <h3>Place an Order</h3>
+      <p>Browse our collections, find your product and click "Order Now" — a form will open where you can fill in your details and send directly to us.</p>
+      <a href="/sofas" class="c-link">Browse Collections →</a>
+    </div>
+  </div>
+
+  <div class="contact-hours reveal">
+    <div class="hours-block">
+      <h4>Response Times</h4>
+      <p>WhatsApp: Within 1 hour<br>All days: 9:00 AM — 9:00 PM UK time</p>
+    </div>
+    <div class="hours-block">
+      <h4>Delivery Information</h4>
+      <p>UK Wide Delivery · Cash on Delivery<br>Delivery arranged after order confirmation</p>
+    </div>
+  </div>
+</div>
+
+<!-- WA BANNER -->
+<div class="contact-wa-banner">
+  <div>
+    <h2>Ready to order?<br>Message us on WhatsApp</h2>
+    <p>Browse the collection, pick your product, and send us a message — it's that simple.</p>
+  </div>
+  <a href="https://wa.me/447593708325" class="btn-wa-big" target="_blank">💬 Open WhatsApp Chat</a>
+</div>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <span class="logo">Ashley Living</span>
+      <p>Premium furniture delivered across the UK. Cash on delivery on every order.</p>
+      <a href="https://wa.me/447593708325" class="footer-wa-btn" target="_blank">💬 WhatsApp Us</a>
+    </div>
+    <div class="footer-col"><h4>Collections</h4><a href="/sofas">Sofas</a><a href="/corner-sofas">Corner Sofas</a><a href="/sofa-beds">Sofa Beds</a><a href="/beds">Beds</a><a href="/mattresses">Mattresses</a><a href="/wardrobes">Wardrobes</a></div>
+    <div class="footer-col"><h4>Information</h4><a href="/contact">Contact Us</a><a href="https://wa.me/447593708325" target="_blank">WhatsApp Order</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="https://wa.me/447593708325" target="_blank">+44 759 370 8325</a><a href="/contact">Send a Message</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Ashley Living. All Rights Reserved.</p><p>UK Wide Delivery · Cash on Delivery</p></div>
+</footer>
+
+<script>
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  const obs = new IntersectionObserver((e) => { e.forEach((el,i) => { if(el.isIntersecting){setTimeout(()=>el.target.classList.add('visible'),i*80);obs.unobserve(el.target);}}); }, {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sofa Beds — Ashley Living</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar">
+  <a href="/" class="logo">Ashley Living</a>
+  <ul class="nav-links"><li><a href="/">Home</a></li>
+    <li><a href="/sofas">Sofas</a></li>
+    <li><a href="/corner-sofas">Corner Sofas</a></li>
+    <li><a href="/sofa-beds">Sofa Beds</a></li>
+    <li><a href="/beds">Beds</a></li>
+    <li><a href="/mattresses">Mattresses</a></li>
+    <li><a href="/wardrobes">Wardrobes</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="https://wa.me/447593708325" class="nav-wa" target="_blank">WhatsApp</a></li></ul>
+  <div class="nav-burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</header>
+<nav class="mobile-menu" id="mobileMenu"><a href="/">Home</a>
+  <a href="/sofas">Sofas</a><a href="/corner-sofas">Corner Sofas</a>
+  <a href="/sofa-beds">Sofa Beds</a><a href="/beds">Beds</a>
+  <a href="/mattresses">Mattresses</a><a href="/wardrobes">Wardrobes</a>
+  <a href="/contact">Contact</a>
+  <a href="https://wa.me/447593708325" class="m-wa" target="_blank">💬 Order on WhatsApp</a></nav>
+
+<div class="page-header">
+  <div class="page-header-left">
+    <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span><span>Sofa Beds</span></div>
+    <h1>Sofa Beds</h1>
+    <p>Space-saving sofa beds for every home · UK Delivery</p>
+  </div>
+  <span class="product-count">6 products</span>
+</div>
+
+<section class="product-section">
+  <div class="product-grid">
+    
+<div class="p-card reveal"><div class="p-card-img"><img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=600&q=80" alt=""/><span class="p-badge">Bestseller</span></div><div class="p-card-body"><h3>Grey Fold-Out Sofa Bed</h3><p>Click-clack mechanism · double sleeping · grey fabric</p><div class="p-card-footer"><span class="p-price">£549</span><button class="p-order-btn" onclick="openOrder('Grey Fold-Out Sofa Bed','£549')">Order Now</button></div></div></div>
+<div class="p-card reveal"><div class="p-card-img"><img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=600&q=80" alt=""/><span class="p-badge">Popular</span></div><div class="p-card-body"><h3>Velvet Sofa Bed</h3><p>Pull-out guest bed · 3 seater · deep blue velvet</p><div class="p-card-footer"><span class="p-price">£699</span><button class="p-order-btn" onclick="openOrder('Velvet Sofa Bed','£699')">Order Now</button></div></div></div>
+<div class="p-card reveal"><div class="p-card-img"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt=""/><span class="p-badge">New In</span></div><div class="p-card-body"><h3>Cream Linen Sofa Bed</h3><p>Elegant linen fabric · king size bed · modern legs</p><div class="p-card-footer"><span class="p-price">£799</span><button class="p-order-btn" onclick="openOrder('Cream Linen Sofa Bed','£799')">Order Now</button></div></div></div>
+<div class="p-card reveal"><div class="p-card-img"><img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&q=80" alt=""/></div><div class="p-card-body"><h3>Compact Studio Sofa Bed</h3><p>Perfect for small spaces · single bed size · charcoal</p><div class="p-card-footer"><span class="p-price">£399</span><button class="p-order-btn" onclick="openOrder('Compact Studio Sofa Bed','£399')">Order Now</button></div></div></div>
+<div class="p-card reveal"><div class="p-card-img"><img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80" alt=""/></div><div class="p-card-body"><h3>Corner Sofa Bed</h3><p>L-shape with pull-out · large family size · grey</p><div class="p-card-footer"><span class="p-price">£1,099</span><button class="p-order-btn" onclick="openOrder('Corner Sofa Bed','£1,099')">Order Now</button></div></div></div>
+<div class="p-card reveal"><div class="p-card-img"><img src="https://images.unsplash.com/photo-1561822894-2b1d1c88a9f7?w=600&q=80" alt=""/><span class="p-badge">Premium</span></div><div class="p-card-body"><h3>Leather Sofa Bed</h3><p>Genuine leather · queen size bed · classic design</p><div class="p-card-footer"><span class="p-price">£1,299</span><button class="p-order-btn" onclick="openOrder('Leather Sofa Bed','£1,299')">Order Now</button></div></div></div>
+  </div>
+</section>
+
+<!-- ORDER MODAL -->
+<div class="modal-overlay" id="orderModal" onclick="if(event.target===this)closeOrder()">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h2>Place Your Order</h2>
+        <p>Fill in your details and we'll confirm via WhatsApp</p>
+      </div>
+      <span class="modal-close" onclick="closeOrder()">✕</span>
+    </div>
+    <div class="modal-product-tag">
+      Ordering: <strong id="modalProductName"></strong>
+      <input type="hidden" id="modalProductInput"/>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Your Full Name *</label>
+        <input type="text" id="oName" placeholder="John Smith"/>
+      </div>
+      <div class="form-group">
+        <label>Contact Number *</label>
+        <input type="tel" id="oPhone" placeholder="+44 7700 000000"/>
+      </div>
+      <div class="form-group">
+        <label>Delivery Address *</label>
+        <textarea id="oAddress" placeholder="House number, street, city, postcode..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>Additional Product Details</label>
+        <input type="text" id="oDetails" placeholder="Colour preference, size, any questions..."/>
+      </div>
+      <div class="form-group">
+        <label>Product Photo (optional)</label>
+        <div class="file-upload-area">
+          <input type="file" id="photoUpload" accept="image/*" multiple/>
+          <div class="upload-icon">📷</div>
+          <p><span>Click to upload</span> or drag a photo here</p>
+        </div>
+        <div class="file-preview" id="photoPreview"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-submit" onclick="submitOrder()">💬 Send Order via WhatsApp</button>
+      <div class="modal-confirm-msg">
+        <strong>Order confirmation:</strong> Your order will be confirmed after we receive your WhatsApp message. Our team will contact you within 1 hour to confirm delivery details and arrange cash on delivery. 🚚
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <span class="logo">Ashley Living</span>
+      <p>Premium furniture delivered across the UK. Cash on delivery on every order.</p>
+      <a href="https://wa.me/447593708325" class="footer-wa-btn" target="_blank">💬 WhatsApp Us</a>
+    </div>
+    <div class="footer-col"><h4>Collections</h4><a href="/sofas">Sofas</a><a href="/corner-sofas">Corner Sofas</a><a href="/sofa-beds">Sofa Beds</a><a href="/beds">Beds</a><a href="/mattresses">Mattresses</a><a href="/wardrobes">Wardrobes</a></div>
+    <div class="footer-col"><h4>Information</h4><a href="/contact">Contact Us</a><a href="https://wa.me/447593708325" target="_blank">WhatsApp Order</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="https://wa.me/447593708325" target="_blank">+44 759 370 8325</a><a href="/contact">Send a Message</a></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 Ashley Living. All Rights Reserved.</p><p>UK Wide Delivery · Cash on Delivery</p></div>
+</footer>
+
+<script>
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+  // Order modal
+  function openOrder(name, price) {
+    document.getElementById('modalProductName').textContent = name + ' — ' + price;
+    document.getElementById('modalProductInput').value = name + ' (' + price + ')';
+    document.getElementById('orderModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeOrder() {
+    document.getElementById('orderModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOrder(); });
+
+  // Image preview
+  document.addEventListener('change', function(e) {
+    if (e.target && e.target.id === 'photoUpload') {
+      const preview = document.getElementById('photoPreview');
+      preview.innerHTML = '';
+      Array.from(e.target.files).forEach(file => {
+        const url = URL.createObjectURL(file);
+        const img = document.createElement('img');
+        img.src = url;
+        preview.appendChild(img);
+      });
+    }
+  });
+
+  // Submit → WhatsApp
+  function submitOrder() {
+    const name    = document.getElementById('oName').value.trim();
+    const phone   = document.getElementById('oPhone').value.trim();
+    const address = document.getElementById('oAddress').value.trim();
+    const product = document.getElementById('modalProductInput').value;
+    const details = document.getElementById('oDetails').value.trim();
+    if (!name || !phone || !address) { alert('Please fill in your name, phone and address.'); return; }
+    const msg = `Hello Ashley Living! I'd like to place an order:%0A%0A` +
+      `*Name:* ${encodeURIComponent(name)}%0A` +
+      `*Phone:* ${encodeURIComponent(phone)}%0A` +
+      `*Address:* ${encodeURIComponent(address)}%0A` +
+      `*Product:* ${encodeURIComponent(product)}%0A` +
+      `*Details:* ${encodeURIComponent(details || 'N/A')}`;
+    window.open('https://wa.me/447593708325?text=' + msg, '_blank');
+  }
+
+  // Scroll reveal
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ashley Living — Furniture UK</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="/" class="logo">Ashley Living</a>
+  <ul class="nav-links">
+    <li><a href="/" class="active">Home</a></li>
+    <li><a href="/sofas">Sofas</a></li>
+    <li><a href="/corner-sofas">Corner Sofas</a></li>
+    <li><a href="/sofa-beds">Sofa Beds</a></li>
+    <li><a href="/beds">Beds</a></li>
+    <li><a href="/mattresses">Mattresses</a></li>
+    <li><a href="/wardrobes">Wardrobes</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="https://wa.me/447593708325" class="nav-wa" target="_blank">WhatsApp</a></li>
+  </ul>
+  <div class="nav-burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/sofas">Sofas</a>
+  <a href="/corner-sofas">Corner Sofas</a>
+  <a href="/sofa-beds">Sofa Beds</a>
+  <a href="/beds">Beds</a>
+  <a href="/mattresses">Mattresses</a>
+  <a href="/wardrobes">Wardrobes</a>
+  <a href="/contact">Contact</a>
+  <a href="https://wa.me/447593708325" class="m-wa" target="_blank">💬 Order on WhatsApp</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1800&q=80" alt="Sofa"/>
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1800&q=80" alt="Bedroom"/>
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1800&q=80" alt="Living Room"/>
+    </div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-tag">UK Wide Delivery &nbsp;·&nbsp; Cash on Delivery</p>
+    <h1>Furniture for<br><em>considered living</em></h1>
+    <div class="hero-actions">
+      <a href="/sofas" class="btn-hero btn-hero-light">Browse Collection</a>
+      <a href="https://wa.me/447593708325" class="btn-hero btn-hero-wa" target="_blank">💬 WhatsApp Order</a>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots">
+    <div class="hero-dot active" onclick="goSlide(0)"></div>
+    <div class="hero-dot" onclick="goSlide(1)"></div>
+    <div class="hero-dot" onclick="goSlide(2)"></div>
+  </div>
+  <div class="hero-counter" id="heroCounter">01 / 03</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>UK Wide Delivery</span><span class="dot">·</span>
+    <span>Cash on Delivery</span><span class="dot">·</span>
+    <span>WhatsApp Ordering</span><span class="dot">·</span>
+    <span>Premium Furniture</span><span class="dot">·</span>
+    <span>Ashley Living</span><span class="dot">·</span>
+    <span>UK Wide Delivery</span><span class="dot">·</span>
+    <span>Cash on Delivery</span><span class="dot">·</span>
+    <span>WhatsApp Ordering</span><span class="dot">·</span>
+    <span>Premium Furniture</span><span class="dot">·</span>
+    <span>Ashley Living</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- COLLECTIONS -->
+<section class="collections">
+  <div class="collections-header reveal">
+    <div>
+      <span class="section-eyebrow">Collections</span>
+      <h2>Shop Our<br>Collections</h2>
+    </div>
+    <p>Premium furniture for every room, delivered anywhere across the United Kingdom.</p>
+  </div>
+
+  <div class="cat-grid">
+    <a href="/sofas" class="cat-item reveal">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80" alt="Sofas"/>
+      <div class="cat-label"><h3>Sofas</h3><span>View Collection</span></div>
+      <div class="cat-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+    <a href="/corner-sofas" class="cat-item reveal">
+      <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=700&q=80" alt="Corner Sofas"/>
+      <div class="cat-label"><h3>Corner Sofas</h3><span>View Collection</span></div>
+      <div class="cat-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+    <a href="/sofa-beds" class="cat-item reveal">
+      <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=700&q=80" alt="Sofa Beds"/>
+      <div class="cat-label"><h3>Sofa Beds</h3><span>View Collection</span></div>
+      <div class="cat-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+    <a href="/beds" class="cat-item reveal">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=700&q=80" alt="Beds"/>
+      <div class="cat-label"><h3>Beds</h3><span>View Collection</span></div>
+      <div class="cat-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+    <a href="/mattresses" class="cat-item reveal">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=80" alt="Mattresses"/>
+      <div class="cat-label"><h3>Mattresses</h3><span>View Collection</span></div>
+      <div class="cat-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+    <a href="/wardrobes" class="cat-item reveal">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Wardrobes"/>
+      <div class="cat-label"><h3>Wardrobes</h3><span>View Collection</span></div>
+      <div class="cat-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+  </div>
+</section>
+
+<!-- EDITORIAL 1 -->
+<div class="editorial reveal">
+  <div class="editorial-img">
+    <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=900&q=80" alt="Living room"/>
+  </div>
+  <div class="editorial-body">
+    <span class="section-eyebrow">How It Works</span>
+    <h2>Browse, choose,<br>order on WhatsApp</h2>
+    <p>No checkout needed. Browse our full collection, find what you love, and send us a WhatsApp message. We handle everything — delivery across the UK, cash on delivery at your door.</p>
+    <a href="https://wa.me/447593708325" class="btn-text" target="_blank">Start a conversation →</a>
+  </div>
+</div>
+
+<!-- EDITORIAL 2 -->
+<div class="editorial rev reveal">
+  <div class="editorial-img">
+    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80" alt="Bedroom"/>
+  </div>
+  <div class="editorial-body">
+    <span class="section-eyebrow">Delivery</span>
+    <h2>Delivered anywhere<br>in the UK</h2>
+    <p>We deliver to every corner of the United Kingdom. Cash on delivery means you only pay when your furniture arrives safely — no risk, no upfront payment required.</p>
+    <a href="/contact" class="btn-text">Ask about delivery →</a>
+  </div>
+</div>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="trust-item reveal">
+    <div class="trust-num">100%</div>
+    <h4>UK Coverage</h4>
+    <p>We deliver to every postcode across the United Kingdom.</p>
+  </div>
+  <div class="trust-item reveal">
+    <div class="trust-num">COD</div>
+    <h4>Cash on Delivery</h4>
+    <p>Pay only when your order arrives safely at your door.</p>
+  </div>
+  <div class="trust-item reveal">
+    <div class="trust-num">1hr</div>
+    <h4>WhatsApp Response</h4>
+    <p>Send us a message and we'll reply within the hour.</p>
+  </div>
+  <div class="trust-item reveal">
+    <div class="trust-num">6+</div>
+    <h4>Categories</h4>
+    <p>Sofas, beds, wardrobes and more — all in stock now.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <span class="logo">Ashley Living</span>
+      <p>Premium furniture delivered across the United Kingdom. Cash on delivery on every order.</p>
+      <a href="https://wa.me/447593708325" class="footer-wa-btn" target="_blank">💬 WhatsApp Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Collections</h4>
+      <a href="/sofas">Sofas</a>
+      <a href="/corner-sofas">Corner Sofas</a>
+      <a href="/sofa-beds">Sofa Beds</a>
+      <a href="/beds">Beds</a>
+      <a href="/mattresses">Mattresses</a>
+      <a href="/wardrobes">Wardrobes</a>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <a href="/contact">Contact Us</a>
+      <a href="https://wa.me/447593708325" target="_blank">WhatsApp Order</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/447593708325" target="_blank">+44 759 370 8325</a>
+      <a href="/contact">Send a Message</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ashley Living. All Rights Reserved.</p>
+    <p>UK Wide Delivery · Cash on Delivery</p>
+  </div>
+</footer>
+
+<script>
+  // Hero slideshow
+  let current = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  const counter = document.getElementById('heroCounter');
+  const total = slides.length;
+  function goSlide(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + total) % total;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    counter.textContent = String(current+1).padStart(2,'0') + ' / ' + String(total).padStart(2,'0');
+  }
+  setInterval(() => goSlide(current + 1), 5000);
+
+  // Mobile menu
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+  // Scroll reveal
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+</script>
+</body>
+</html>
