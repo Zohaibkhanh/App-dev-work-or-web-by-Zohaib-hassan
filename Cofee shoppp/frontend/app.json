@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "CoffeeShop",
+    "slug": "CoffeeShop",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.zohaibkhanns.CoffeeShop"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 34,
+            "minSdkVersion": 23,
+            "kotlinVersion": "2.0.21",
+            "javaVersion": "11"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e7788b53-7973-4b04-bd2b-627dd08030e9"
+      }
+    }
+  }
+}
