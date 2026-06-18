@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npx expo export:web",
+  "outputDirectory": "web-build",
+  "devCommand": "npx expo start --web",
+  "installCommand": "yarn install",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
+
